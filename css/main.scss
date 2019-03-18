@@ -1,0 +1,207 @@
+/* Web Fonts & Fonts */
+@font-face {
+    font-family: 'montserratbold';
+    src: url('../fonts/montserrat-bold-webfont.woff2') format('woff2'),
+         url('../fonts/montserrat-bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+/* Reset */
+
+* {outline: none; box-sizing: border-box; -webkit-overflow-scrolling: touch}
+a {text-decoration: none; cursor: pointer;}
+body, html, h1, h2, h3, h4, h5, h6, p, header, footer, div, article, section, aside {padding: 0; margin: 0; position: relative;}
+body, html {height: 100%;}
+input, select, textarea, button {outline: 0; border: 0; appearance: none; -webkit-appearance: none; -moz-appearance: none; -o-appearance: none;}
+
+/* Common Classes */
+.wid100 {width:100%; float: left; }
+.fleft {float: left;}
+.fright {float: right;}
+.listn {list-style: none; margin: 0; padding: 0;}
+.defimg {width: 100%; height: auto;}
+.defimg2 {width: auto; height: auto;}
+.coverimg {width: 100%; height: 100%; object-fit: cover;}
+.containimg {width: 100%; height: 100%; object-fit: contain;}
+.pagewrapper {width: 100%;  margin: 0 auto; max-width: 1366px; padding: 0 25px;}
+.pagewrapper2 {width: 100%; margin: 0 auto; max-width: 990px;}
+img {@extend .defimg}
+.close {width: 35px; height: 35px; background: url(../images/iconset1.png) no-repeat right -35px; position: absolute; right: 10px; top: 10px;}
+.flex {  display: -webkit-box;  display: -moz-box;  display: -ms-flexbox;  display: -webkit-flex;  display: flex;  -webkit-flex-flow: row wrap;  justify-content: flex-start;  flex-wrap: wrap;}
+
+/* Colors & Fonts */
+$fontmain: 'futura_icgregular', Arial, sans-serif;
+$fonthead: 'montserratbold', Arial, sans-serif;
+$fontlink: 'Proxima Nova', Arial, sans-serif;
+$fontcat: 'montserratsemibold', Arial, sans-serif;
+
+/* Colors */
+$dgreen : #117c45;
+$green : #00a651;
+$white : #fff;
+$black : #000;
+
+
+
+
+
+.home {
+
+    .social { position: absolute; z-index: 2;   /*  right: 102px; top: 118px; */ top: 3vh; right: 4vw; opacity: 0; 
+        ul {@extend .flex; margin: 0px -8px;
+            li { padding: 0px 8px}
+        }
+    }
+
+    .social.active { animation: show 1s ease-in-out forwards; -webkit-animation: show 1s ease-in-out forwards; animation-delay: .5;}
+
+    .sec-1 { height: 100vh; min-height: 100vh; background: url(../images/bg.jpg) no-repeat; background-size: cover; 
+
+        .hero { position: absolute; width: 100%; text-align: center; left: 0; top: 50%; transform: translate(0, -50%); padding: 0px 70px;
+            aside {   /* margin-bottom: 100px; */ margin-bottom: 8vh; opacity: 0;
+                img { width: auto;  margin: 0 auto; display: block; max-width: 100%;}
+            }
+            article { opacity: 0;
+                h3 { font-family: $fonthead; font-size: 50px; color: $dgreen; text-transform: uppercase; /* margin-bottom: 40px; */ margin-bottom: 3vh;}
+                ul { @extend .flex; justify-content: center;
+                    li { position: relative;
+
+                        input[type="text"] { width: 100%; height: 67px; background: transparent; box-shadow: inset 0px 2px 80px #484747; padding-left: 80px; font-family: $fonthead; font-size: 16px; color: $white;}
+
+                        input[type="text"]::placeholder  { font-family: $fonthead; color: $white; text-transform: uppercase; letter-spacing: 1px; text-shadow: 0px 0px 5px #000; font-size: 16px;}
+
+                        i {     font-size: 30px; color: #fff; position: absolute; top: 50%; left: 25px; transform: translate(0, -50%); text-shadow: 0px 0px 5px #000;}
+
+                        input[type="submit"] { background: $green; height: 67px; width: 200px; letter-spacing: 1px; color: $white; font-family: $fonthead; text-transform: uppercase; font-size: 16px; box-shadow: 5px 5px 10px #636363;}
+
+                    }
+
+                    li:first-child { max-width: 580px; width: 100%; padding-right: 15px;}
+                }
+            }
+        }
+
+        .hero.active {
+            aside { animation: fade-down 1s ease-in-out forwards; -webkit-animation: fade-down 1s ease-in-out forwards;}
+            article { animation: fade-up 1s ease-in-out forwards; -webkit-animation: fade-up 1s ease-in-out forwards;}
+        }
+
+    }
+
+
+    .sec-2 { height: 100vh; background: url(../images/bg2.png) no-repeat; background-size: cover;
+        .hero { max-width: 60%; width: 100%; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
+            iframe { width: 100%; height: 64vh; margin-bottom: 4vh;}
+            h3 { font-family: $fonthead; color: $dgreen; font-size: 30px; text-align: center;}
+        }
+
+        .hero.active {
+            iframe { animation: fade-down 1s ease-in-out forwards; -webkit-animation: fade-down 1s ease-in-out forwards;}
+            h3 { animation: fade-up 1s ease-in-out forwards; -webkit-animation: fade-up 1s ease-in-out forwards;}
+        }
+    }
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@keyframes fade-down {
+    from {
+        opacity: 0;
+        transform: translate(0, -50px);
+    }
+    to {
+        opacity: 1;
+        transform: translate(0, 0px);
+    }
+}
+
+@-webkit-keyframes fade-down {
+    from {
+        opacity: 0;
+        transform: translate(0, -50px);
+    }
+    to {
+        opacity: 1;
+        transform: translate(0, 0px);
+    }
+}
+
+@keyframes fade-up {
+    from {
+        opacity: 0;
+        transform: translate(0, 50px);
+    }
+    to {
+        opacity: 1;
+        transform: translate(0, 0px);
+    }
+}
+
+@-webkit-keyframes fade-up {
+    from {
+        opacity: 0;
+        transform: translate(0, 50px);
+    }
+    to {
+        opacity: 1;
+        transform: translate(0, 0px);
+    }
+}
+
+
+@-webkit-keyframes show {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {  
+   /* CLASS GO HERE */
+}
+

@@ -1,0 +1,37 @@
+@media only screen and (max-width: 1300px){
+	.home .sec-1 .hero article h3 {font-size: 45px!important;}
+	.home .sec-2 .hero { max-width: 100%!important; padding: 0px 70px!important;}
+}
+
+
+@media only screen and (max-width: 1100px){
+	.home .sec-1 .hero article h3 { font-size: 40px!important;}
+	.home .sec-1 .hero article ul li:first-child { max-width: 400px!important;}
+	.home .sec-1 .hero article ul li input[type="text"] { height: 50px!important;}
+	.home .sec-1 .hero article ul li input[type="submit"] { height: 50px!important; padding: 0px 35px; width: auto!important;}
+	.home .sec-2 .hero h3 { font-size: 25px!important;}
+}
+
+@media only screen and (max-width: 800px){
+	.home .sec-1 .hero article h3 { font-size: 35px!important;}
+	/*.home .sec-1 .hero{ position: relative!important; top: 0!important; transform: translate(0, 0)!important;}*/
+	.home .sec-1 .hero, .home .sec-2 .hero { padding: 0px 35px!important;}
+	.home .sec-1 .hero aside { max-width: 80%!important; margin: 0 auto 8vh!important;}
+	.home .sec-1 .hero article ul li:first-child {max-width: 350px!important;}
+	.home .sec-2 .hero iframe { height: 50vh!important;}
+}
+
+@media only screen and (max-width: 600px){
+	.home .sec-1 .hero.active aside  {max-width: 100%!important; }
+	.home .sec-1 .hero article ul li:first-child {max-width: 100%!important; margin-bottom: 25px!important; padding-right: 0px!important;}
+	.home .sec-1 .hero aside { margin-bottom: 30px!important;}
+	.home .sec-1 .hero { padding: 0px 25px!important;}
+	.home .sec-1 .hero article h3 { margin-bottom: 25px!important;}
+	.home .sec-2 .hero{ position: relative!important; top: 0!important; left: 0!important; transform: translate(0, 0)!important;}
+	.home .sec-2 { height: auto!important; padding: 80px 0px!important;}
+	.home .sec-2 .hero iframe { height: 200px!important;}
+	.home .sec-1 .hero { position: relative!important; left: 0!important; transform: translate(0, 0)!important; top: 0!important; }
+	.home .sec-1 { height: auto!important; min-height: auto!important; padding: 100px 0px!important;}
+	
+
+}
